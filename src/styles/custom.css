@@ -1,0 +1,196 @@
+@layer base {
+   html {
+      scroll-behavior: smooth;
+   }
+}
+
+@layer components {
+   .text-contained {
+      @apply text-white [-webkit-text-fill-color:white] [-webkit-text-stroke-width:0px] [-webkit-text-stroke-color:white];
+   }
+
+   .text-outline {
+      @apply text-transparent [-webkit-text-fill-color:transparent] [-webkit-text-stroke-width:5px] [-webkit-text-stroke-color:white];
+   }
+
+   .text-outline-1 {
+      @apply text-white [-webkit-text-fill-color:white] [-webkit-text-stroke-width:1px] [-webkit-text-stroke-color:#FF577F];
+   }
+
+   .btn-contained {
+      @apply text-base md:text-xl font-semibold text-center text-slate-900 bg-yellow rounded-xl border-[3px] border-yellow hover:text-yellow hover:bg-transparent transition ease-out duration-500;
+   }
+
+   .btn-outline {
+      @apply text-base md:text-xl font-semibold text-center text-slate-900 bg-white rounded-xl border-[3px] border-[#CBCBCB] hover:text-white hover:bg-[#CBCBCB] transition ease-out duration-500;
+   }
+
+   .btn-default {
+      @apply text-base md:text-xl font-semibold text-center text-slate-900 bg-white rounded-xl border-[3px] border-white hover:text-white hover:bg-transparent transition ease-out duration-500;
+   }
+}
+
+@layer utilities {
+   /*Loader color*/
+   #upperbar rect {
+      fill: #f3b046 !important;
+   }
+
+   #middlebar rect {
+      fill: #c17f17 !important;
+   }
+
+   #bottombar rect {
+      fill: #613f0b !important;
+   }
+
+   #banner {
+      background-image: url('/assets/images/banner/banner9.png');
+      background-position: center top 50px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* background-blend-mode: multiply; */
+   }
+
+   @media screen(xs) {
+      #banner {
+         background-position: center top 50px;
+         background-size: cover;
+      }
+   }
+
+   @media screen(md) {
+      #banner {
+         background-position: center top 60px;
+         background-size: cover;
+      }
+   }
+
+   @media screen(sm) {
+      #banner {
+         background-position: center top 70px;
+         background-size: cover;
+      }
+   }
+
+   @media (min-width: 2000px) {
+      #banner {
+         background-size: auto;
+      }
+   }
+
+   #mystery {
+      background-image: url('/assets/images/banner/mystery.png');
+      /* background-position: center top 100px; */
+      /* background-repeat: no-repeat; */
+      /* background-size: contain; */
+      /* background-blend-mode: multiply; */
+   }
+   
+
+   /* #banner {
+      background-image: url('/assets/images/banner/Gabbi.png'),
+         url('/assets/images/banner/Bubbles.png');
+      background-position: 115px 120px, 0px 90px;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 80%, 100%;
+   }
+
+   @media screen(sm) {
+      #banner {
+         background-position: 140px 100px,
+            0px 95px;
+         background-size: 80%, 100%;
+      }
+   }
+
+   @media screen(md) {
+      #banner {
+         background-position: 230px 100px,
+            0px 95px;
+         background-size: 80%, 100%;
+      }
+   }
+
+   @media screen(lg) {
+      #banner {
+         background-position: 300px 100px,
+            0px 95px;
+         background-size: auto, auto;
+      }
+   }
+
+   @media screen(xl) {
+      #banner {
+         background-position: right 100px bottom,
+            center 95px;
+         background-size: auto, auto;
+      }
+   }
+
+   @media screen(2xl) {
+      #banner {
+         background-position: right 300px bottom,
+            center 95px;
+         background-size: auto, auto;
+      }
+   }
+
+   @media (min-width: 2000px) {
+      #banner {
+         background-position: center bottom,
+            center 95px;
+         background-size: auto, auto;
+      }
+   } */
+
+   .bg-linear-gradient {
+      background: linear-gradient(
+         180deg,
+         rgba(0, 0, 0, 0) 0%,
+         #000000 100%
+      );
+   }
+
+   .border-line {
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      border-color: #4E4E4E;
+   }
+
+
+   .slide-up {
+      height: 0;
+      transition: height 0.2s ease-in-out;
+   }
+
+   .slide-down {
+      height: 100%;
+      transition: height 0.2s ease-in-out;
+   }
+
+   .slide-up,
+   .slide-down {
+      overflow: hidden;
+      transition: height 0.3s ease-in-out;
+   }
+
+   .slide-up > div,
+   .slide-down > div {
+      transform: translateY(-100%);
+      transition: 0.3s ease-in-out;
+   }
+
+   .slide-down > div {
+      transform: translateY(0);
+      max-height: 100%;
+   }
+}
+
+/*.spinner-container {
+   margin: 40% auto !important;
+   top: 0 !important;
+   left: 0 !important;
+   position: relative !important;
+   z-index: 10 !important;
+}*/
